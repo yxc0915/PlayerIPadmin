@@ -1,36 +1,43 @@
 # PlayerIPadmin
 
-PlayerIPadmin是一个为Minecraft服务器设计的插件，它提供了详细的玩家IP和地理位置信息查询功能。当玩家加入服务器时，插件会显示他们的地理位置（国家+省份+地级市），并且允许管理员通过`/getip`命令查询玩家的IP地址和地理位置信息。
+PlayerIPadmin 是一个Minecraft服务器插件，专为服务器管理员提供玩家IP地址和地理位置信息的查询功能。当玩家加入服务器时，自动向玩家和全服广播显示他们的地理位置信息。此外，插件还提供了一个API，允许其他插件开发者轻松获取玩家的IP地址和地理位置信息。
 
 ## 功能
 
-- **玩家加入提示**：当玩家加入游戏时，自动向玩家显示当前和上次登录的地理位置信息；同时向全服广播玩家的登录地点。
-- **IP和地理位置查询**：允许管理员使用`/getip <玩家名>`命令查询指定玩家的IP地址和详细地理位置信息。
-- ![I({1(1QOAP$B6RUQFMSP$@A](https://github.com/yxc0915/PlayerIPadmin/assets/62410385/e3b13c37-56de-4c64-9bb6-ab6da85ff468)
+- 自动在玩家加入时显示和广播玩家的地理位置信息。
+- 提供`/getip`命令，使管理员能够查询玩家的IP地址和详细地理位置信息（国家、省份、地级市）。
+- 提供API，允许其他插件获取玩家的IP和地理位置信息。
+- - ![I({1(1QOAP$B6RUQFMSP$@A](https://github.com/yxc0915/PlayerIPadmin/assets/62410385/e3b13c37-56de-4c64-9bb6-ab6da85ff468)
 - ![(TCM$XL7PHH9OS HS8F~H{6](https://github.com/yxc0915/PlayerIPadmin/assets/62410385/44ac5433-bb13-4703-8623-f364aed0ad49)
 
 
 ## 安装
 
-1. 确保你的Minecraft服务器运行的是支持插件的版本，如Spigot或Paper。
-2. 下载`PlayerIPadmin.jar`文件。
-3. 将下载的`PlayerIPadmin.jar`文件复制到你的服务器的`plugins`目录下。
-4. 重启服务器，插件将自动加载。
+1. 确保您的服务器运行Spigot、Paper或兼容的Minecraft服务器软件。
+2. 从[插件发布页面](#)下载`PlayerIPadmin.jar`文件。（请替换`#`为实际下载链接）
+3. 将`PlayerIPadmin.jar`文件复制到您的服务器的`plugins`目录中。
+4. 重启服务器。
 
-## 使用
+## 使用方法
 
-- **查看玩家IP和地理位置**：使用`/getip <玩家名>`命令。需要管理员权限。
+### 对于服务器管理员
 
-## 配置
+- 使用`/getip <玩家名>`命令查询指定玩家的IP和地理位置信息。
 
-插件提供了一些可配置选项，这些选项可以在`plugins/PlayerIPadmin/config.yml`文件中找到和修改。当前可配置的选项包括：
+### 对于插件开发者
 
-- `messages.personalLoginMessage`: 定制发送给玩家的登录地理位置信息。
-- `messages.broadcastLoginMessage`: 定制广播给全服的玩家登录地理位置信息。
+- 可以通过`PlayerIPadmin`提供的API获取玩家的IP地址和地理位置信息。示例用法如下：
 
-## 权限
+```java
+PlayerIPadmin plugin = (PlayerIPadmin) Bukkit.getServer().getPluginManager().getPlugin("PlayerIPadmin");
+if (plugin != null) {
+    PlayerIPadminAPI api = plugin.getApi();
+    String ip = api.getPlayerIP(player); // 获取玩家IP
+    api.getPlayerLocationAsync(ip, locationInfo -> {
+        // 处理地理位置信息
+    });
+}
 
-- `playeripadmin.getip`: 允许使用`/getip`命令查询玩家IP和地理位置。
 
 ## 构建
 
