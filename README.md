@@ -18,7 +18,7 @@ Java1.20.4（已测试）
 ## 安装
 
 1. 确保您的服务器运行Spigot、Paper或兼容的Minecraft服务器软件。
-2. 从[插件发布页面](https://github.com/yxc0915/PlayerIPadmin/releases/tag/)下载`PlayerIPadmin.jar`文件。
+2. 从[插件发布页面](https://github.com/yxc0915/PlayerIPadmin/releases/)下载`PlayerIPadmin.jar`文件。
 3. 将`PlayerIPadmin.jar`文件复制到您的服务器的`plugins`目录中。
 4. 重启服务器。
 
