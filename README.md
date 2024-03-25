@@ -43,5 +43,5 @@ PlayerIPadmin是一个为Minecraft服务器设计的插件，它提供了详细�
 
 ## 许可证
 
-[MIT](LICENSE) © [MT&OGCL]
+[MIT](LICENSE) © [yxc0915]
 
