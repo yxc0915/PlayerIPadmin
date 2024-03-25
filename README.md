@@ -14,7 +14,7 @@ PlayerIPadmin 是一个Minecraft服务器插件，专为服务器管理员提供
 ## 安装
 
 1. 确保您的服务器运行Spigot、Paper或兼容的Minecraft服务器软件。
-2. 从[插件发布页面](#)下载`PlayerIPadmin.jar`文件。（请替换`#`为实际下载链接）
+2. 从[插件发布页面]((https://github.com/yxc0915/PlayerIPadmin/releases/tag/)下载`PlayerIPadmin.jar`文件。
 3. 将`PlayerIPadmin.jar`文件复制到您的服务器的`plugins`目录中。
 4. 重启服务器。
 
