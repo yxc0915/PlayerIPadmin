@@ -1,0 +1,13 @@
+name: PlayerIPadmin
+version: '${project.version}'
+main: ogcl.fun.PlayerIPadmin
+api-version: '1.20'
+commands:
+  getip:
+    description: 获取玩家的IP地址和上一次登录位置
+    usage: /getip <玩家名>
+    permission: playeripadmin.getip
+permissions:
+  playeripadmin.getip:
+    description: 允许获取玩家的IP地址和上一次登录位置
+    default: op

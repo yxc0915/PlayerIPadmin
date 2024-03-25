@@ -1,0 +1,20 @@
+# 自定义消息模板
+messages:
+  personalLoginMessage: "感谢选择樨苑云烟服务器！祝你玩的开心！\n你当前的登录位置是%s，上一次登录位置%s，请注意核实！"
+  broadcastLoginMessage: "玩家%s在%s登录服务器！"
+
+# 首次登录奖励的具体配置（示例）
+firstLoginReward:
+  enabled: true
+  message: "由于您是首次登录，您获得了特别奖励！"
+  items:
+    - type: DIAMOND
+      amount: 5
+    - type: GOLDEN_APPLE
+      amount: 1
+
+# 权限相关的配置
+permissions:
+  getip:
+    description: "允许使用/getip命令查询玩家IP和登录位置"
+    default: op
